@@ -49,3 +49,5 @@ end
 gem 'spree', '~> 3.0.7'
 gem 'spree_gateway', '~> 3.0.0'
 gem 'spree_auth_devise', '~> 3.0.0'
+
+gem 'seed_dump'
