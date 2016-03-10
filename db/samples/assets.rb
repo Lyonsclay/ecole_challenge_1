@@ -2,25 +2,24 @@ Spree::Sample.load_sample("products")
 Spree::Sample.load_sample("variants")
 
 products = {}
-products[:ror_baseball_jersey] = Spree::Product.find_by_name!("Ruby on Rails Baseball Jersey") 
-products[:ror_tote] = Spree::Product.find_by_name!("Ruby on Rails Tote")
-products[:ror_bag] = Spree::Product.find_by_name!("Ruby on Rails Bag")
-products[:ror_jr_spaghetti] = Spree::Product.find_by_name!("Ruby on Rails Jr. Spaghetti")
-products[:ror_mug] = Spree::Product.find_by_name!("Ruby on Rails Mug")
-products[:ror_ringer] = Spree::Product.find_by_name!("Ruby on Rails Ringer T-Shirt")
-products[:ror_stein] = Spree::Product.find_by_name!("Ruby on Rails Stein")
-products[:spree_baseball_jersey] = Spree::Product.find_by_name!("Spree Baseball Jersey")
-products[:spree_stein] = Spree::Product.find_by_name!("Spree Stein")
-products[:spree_jr_spaghetti] = Spree::Product.find_by_name!("Spree Jr. Spaghetti")
-products[:spree_mug] = Spree::Product.find_by_name!("Spree Mug")
-products[:spree_ringer] = Spree::Product.find_by_name!("Spree Ringer T-Shirt")
-products[:spree_tote] = Spree::Product.find_by_name!("Spree Tote")
-products[:spree_bag] = Spree::Product.find_by_name!("Spree Bag")
-products[:ruby_baseball_jersey] = Spree::Product.find_by_name!("Ruby Baseball Jersey")
-products[:apache_baseball_jersey] = Spree::Product.find_by_name!("Apache Baseball Jersey")
+products[:1] = Spree::Product.find_by_slug!("001") 
+products[:2] = Spree::Product.find_by_slug!("002")
+products[:3] = Spree::Product.find_by_slug!("003")
+products[:4] = Spree::Product.find_by_slug!("004")
+products[:5] = Spree::Product.find_by_slug!("005")
+products[:6] = Spree::Product.find_by_slug!("006")
+products[:7] = Spree::Product.find_by_slug!("007")
+products[:8] = Spree::Product.find_by_slug!("008")
+products[:9] = Spree::Product.find_by_slug!("009")
+products[:10] = Spree::Product.find_by_slug!("010")
+products[:11] = Spree::Product.find_by_slug!("011")
+products[:12] = Spree::Product.find_by_slug!("012")
+products[:13] = Spree::Product.find_by_slug!("013")
+products[:14] = Spree::Product.find_by_slug!("014")
+products[:15] = Spree::Product.find_by_slug!("015")
 
 
-def image(name, type="jpeg")
+def image(name, type="jpg")
   images_path = Pathname.new(File.dirname(__FILE__)) + "images"
   path = images_path + "#{name}.#{type}"
   return false if !File.exist?(path)
@@ -28,127 +27,82 @@ def image(name, type="jpeg")
 end
 
 images = {
-  products[:ror_tote].master => [
+  products[:1].master => [
     {
-      :attachment => image("ror_tote")
-    },
-    {
-      :attachment => image("ror_tote_back") 
+      :attachment => image("001")
     }
   ],
-  products[:ror_bag].master => [
+  products[:2].master => [
     {
-      :attachment => image("ror_bag")
+      :attachment => image("002")
     }
   ],
-  products[:ror_baseball_jersey].master => [
+  products[:3].master => [
     {
-      :attachment => image("ror_baseball")
-    },
-    {
-      :attachment => image("ror_baseball_back")
+      :attachment => image("003")
     }
   ],
-  products[:ror_jr_spaghetti].master => [
+  products[:1].master => [
     {
-      :attachment => image("ror_jr_spaghetti")
+      :attachment => image("004")
     }
   ],
-  products[:ror_mug].master => [
+  products[:5].master => [
     {
-      :attachment => image("ror_mug")
-    },
-    {
-      :attachment => image("ror_mug_back")
+      :attachment => image("005")
     }
   ],
-  products[:ror_ringer].master => [
+  products[:6].master => [
     {
-      :attachment => image("ror_ringer")
-    },
-    {
-      :attachment => image("ror_ringer_back")
+      :attachment => image("006")
     }
   ],
-  products[:ror_stein].master => [
+  products[:7].master => [
     {
-      :attachment => image("ror_stein")
-    },
-    {
-      :attachment => image("ror_stein_back")
+      :attachment => image("007")
     }
   ],
-  products[:apache_baseball_jersey].master => [
+  products[:8].master => [
     {
-      :attachment => image("apache_baseball", "png")
-    },
-  ],
-  products[:ruby_baseball_jersey].master => [
-    {
-      :attachment => image("ruby_baseball", "png")
-    },
-  ],
-  products[:spree_bag].master => [
-    {
-      :attachment => image("spree_bag")
-    },
-  ],
-  products[:spree_tote].master => [
-    {
-      :attachment => image("spree_tote_front")
-    },
-    {
-      :attachment => image("spree_tote_back") 
+      :attachment => image("008")
     }
   ],
-  products[:spree_ringer].master => [
+  products[:9].master => [
     {
-      :attachment => image("spree_ringer_t")
-    },
-    {
-      :attachment => image("spree_ringer_t_back") 
+      :attachment => image("009")
     }
   ],
-  products[:spree_jr_spaghetti].master => [
+  products[:10].master => [
     {
-      :attachment => image("spree_spaghetti")
+      :attachment => image("010")
     }
   ],
-  products[:spree_baseball_jersey].master => [
+  products[:11].master => [
     {
-      :attachment => image("spree_jersey")
-    },
-    {
-      :attachment => image("spree_jersey_back") 
+      :attachment => image("011")
     }
   ],
-  products[:spree_stein].master => [
+  products[:12].master => [
     {
-      :attachment => image("spree_stein")
-    },
-    {
-      :attachment => image("spree_stein_back") 
+      :attachment => image("012")
     }
   ],
-  products[:spree_mug].master => [
+  products[:13].master => [
     {
-      :attachment => image("spree_mug")
-    },
-    {
-      :attachment => image("spree_mug_back") 
+      :attachment => image("013")
     }
   ],
+  products[:14].master => [
+    {
+      :attachment => image("014")
+    }
+  ],
+  products[:15].master => [
+    {
+      :attachment => image("015")
+    }
+  ]
 }
-
-products[:ror_baseball_jersey].variants.each do |variant|
-  color = variant.option_value("tshirt-color").downcase
-  main_image = image("ror_baseball_jersey_#{color}", "png")
-  variant.images.create!(:attachment => main_image)
-  back_image = image("ror_baseball_jersey_back_#{color}", "png")
-  if back_image
-    variant.images.create!(:attachment => back_image)
-  end
-end
 
 images.each do |variant, attachments|
   puts "Loading images for #{variant.product.name}"
