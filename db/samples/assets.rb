@@ -55,7 +55,7 @@ images = {
   products[:6].master => [
     {
       :attachment => image("006")
-    }
+    }{name: "Its gonna be a tough sell!", description: "The fashion shoot had signs that it was going off the rails yet he persists into the unknown. Forging ahead just like every other day.", available_on: "2016-02-24 00:00:00", deleted_at: nil, slug: "001", meta_description: "", meta_keywords: "", tax_category_id: 1, shipping_category_id: 1, promotionable: true, meta_title: ""}
   ],
   products[:7].master => [
     {
