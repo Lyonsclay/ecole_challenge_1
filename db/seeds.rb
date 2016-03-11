@@ -1,5 +1,5 @@
-require 'byebug'
- 
+Spree::Product.destroy_all
+
 clothing = Spree::TaxCategory.find_by_name!("Clothing")
 shipping_category = Spree::ShippingCategory.find_by_name!("Default")
 
